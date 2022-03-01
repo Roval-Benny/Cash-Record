@@ -1,0 +1,47 @@
+<app-filter></app-filter>
+<app-in-out-button></app-in-out-button>
+<div class="col-10 col-md-8 col-lg-6 offset-md-2 offset-lg-3">
+    <div class="summary-class">
+        <div class="card col-4 col-md-8 col-lg-10 offset-md-2" >
+            <div class="card-body">
+              <p class="card-text" style="color:green;">+ Cash In</p>
+              <h5 class="card-title" style="color: green;">{{cashIn}}</h5>
+            </div>
+          </div>
+          <div class="card col-4 col-md-8 col-lg-10 offset-md-2">
+            <div class="card-body">
+              <p class="card-text" style="color: red;">- Cash Out</p>
+              <h5 class="card-title" style="color: red;">{{cashOut}}</h5>
+            </div>
+          </div>
+        <div class="card col-4 col-md-8 col-lg-10 offset-md-2">
+            <div class="card-body">
+              <p class="card-text" style="color:royalblue;">= Net Balance</p>
+              <h5 class="card-title" style="color: royalblue;">{{netBalance}}</h5>
+            </div>
+          </div>
+    </div>
+    
+</div>
+<table class="table detail-table">
+    <thead class="table-dark">
+      <tr>
+        <th scope="col">Date</th>
+        <th scope="col">Description</th>
+        <th scope="col">Amount</th>
+        <th scope="col">Balance</th>
+      </tr>
+    </thead>
+    <tbody *ngFor = "let i of Entries">
+      <tr>
+        <td>{{i.date | date}}</td>
+        <td>{{i.description}}</td>
+        <td><span *ngIf="i.type" style="font-weight:bolder;color: green;">{{i.amount}}</span>
+          <span 
+            *ngIf="!i.type" style="font-weight: bolder; color: red;">{{i.amount}}
+        </span>
+        </td>
+        <td>{{i.balance}}</td>
+      </tr>
+    </tbody>
+  </table>

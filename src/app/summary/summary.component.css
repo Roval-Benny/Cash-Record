@@ -1,0 +1,20 @@
+.summary-class{
+    display: inline-flex;
+    justify-content: space-around;
+}
+
+.data-entry-summary{
+    background-color: gray;
+    color: honeydew;
+    font-weight: 600;
+    display: inline-flex;
+    width: 90%;
+    justify-content: space-around;
+    margin-top: 2%;
+    margin-left: 10%;
+}
+.detail-table{
+    width: 80vw;
+    margin: auto;
+    margin-top: 2vh;
+}

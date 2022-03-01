@@ -1,0 +1,19 @@
+<h4 style="margin-left: 2%;">Cash In Entry</h4>
+<div class="col-12 col-md-8 col-lg-6 offset-md-4 offset-lg-4">
+    <div>
+    <!-- <ejs-calendar #ejCalendar [value]='value' (change)='onChange($event)' [min]='minDate' ></ejs-calendar>      </div> -->
+    <ejs-calendar (change)= 'onChange($event)' [max]="maxDate"></ejs-calendar>`
+    <div class="container" >
+        <div class="row" style="height: 70px;">
+            <div class="col-12 col-md-6" style="margin-top: 10px;">
+                <label for="">Amount</label>
+                <input type="text" class="form-control col-10 col-md-6 col-lg-4" [(ngModel)]="entry.amount" placeholder="Enter Amount" aria-label="Enter the amount" style="font-size: larger; margin-top: 2%;" >
+                <label for="">Description</label>
+                <input type="text" class="form-control col-10 col-md-6 col-lg-4" placeholder="Description" aria-label="Enter the description" style="margin-top: 2%;" [(ngModel)]= "entry.description">
+            </div>
+        </div>
+    </div>
+    <button class="btn btn-primary col-10 col-md-6 col-lg-4" style="margin-left: 10%; margin-top: 15%;" (click)="onAddEntry()">
+        Add Entry
+    </button>
+</div>
